@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>product UI</title>
+    <link rel="stylesheet" href="../static/css/product%20UI.css">
+</head>
+<body>
+    <div class="card">
+        <div class="top-section">
+            <img id="image-container" src="../static/image/1.png" alt="">
+            <div class="nav">
+                <img onclick="change_img(this)" src="../static/image/1.png" alt="">
+                <img onclick="change_img(this)" src="../static/image/2.png" alt="">
+                <img onclick="change_img(this)" src="../static/image/3.png" alt="">
+            </div>
+            <div class="price">$80</div>
+        </div>
+
+        <div class="product-info">
+            <div class="name">Sun-glass</div>
+            <div class="desc">Awesome Sun-glass</div>
+            <a class="btn" href="#">Add to Cart</a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var container=document.getElementById('image-container');
+        function change_img(image) {
+            container.src = image.src;
+        }
+    </script>
+</body>
+</html>

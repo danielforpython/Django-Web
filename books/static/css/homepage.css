@@ -1,0 +1,16 @@
+.home{
+    background-color: pink;
+    height: 200px;
+    padding: 10px 10px 10px 10px;
+    border: blue;
+    border-width: 2px;
+    margin: 150px 200px 50px 150px;
+    /*justify-content: center;*/
+
+}
+p{
+    font-size: 28px;
+    color: firebrick;
+    /*float: left;*/
+
+}

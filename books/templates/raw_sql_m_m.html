@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+        raw_sql_m_m
+    {% endblock %}</title>
+</head>
+<body>
+{% block content %}
+    <br>'''select n.`id`, n.`ntitle`,n.`ncontent`,t.`tname`
+                                    from books_newsinfo n,books_typeinfo t,books_newsinfo_typeinfo nt
+                                    where n.`id`=nt.`newsinfo_id` and t.`id`=nt.`typeinfo_id` order by n.`id`;'''
+    {% for foo in context %}
+        <h5>{{ foo.id }}--{{ foo.ntitle }}--{{ foo.ncontent }}--{{ foo.tname }}</h5>
+    {% endfor %}
+
+{% endblock %}
+</body>
+</html>

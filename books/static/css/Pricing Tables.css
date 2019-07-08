@@ -1,0 +1,59 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #f1f1f1;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+.pt{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 960px;
+}
+.box{
+  width: 300px;
+  font-family: sans-serif;
+  overflow: hidden;
+  background: #212527;
+  color: white;
+  float: left;
+  margin: 10px;
+}
+.header{
+  margin: 0;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.cash{
+  border-bottom: 1px solid #3e4e56;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 24px;
+}
+.cash span{
+  font-size: 65px;
+  display: block;
+}
+li{
+  border-bottom: 1px solid #3e4e56;
+  padding: 10px;
+  text-align: center;
+}
+li a{
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px;
+  display: block;
+  transition: 0.3s all;
+}
+li a:hover{
+  color: #676565;
+}
+

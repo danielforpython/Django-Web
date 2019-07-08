@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+            Area
+    {% endblock %}</title>
+</head>
+<body>
+{% block content %}
+
+
+    <table border="1">
+        <caption>Area List</caption>
+        <thead>
+            <th>区域ID</th>
+            <th>区域名</th>
+            <th>上级ID</th>
+        </thead>
+        {% for area in areas %}
+
+        <tr>
+
+            <td>{{ area.id }}</td>
+            <td>{{ area.atitle }}</td>
+            <td>{{ area.aParent_id }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+</body>
+</html>

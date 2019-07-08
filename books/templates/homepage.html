@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+        Shirley
+    {% endblock %}</title>
+{#    <link rel="stylesheet" href={% static 'css/homepage.css' %}>#}
+</head>
+<body>
+{% include 'nav.html' %}
+<h1 class="home">home,<br>page,</h1>
+{% block content %}
+{#    此处用来收集post的data，并且此data为clean data#}
+    <h6>此处用来收集post的data，并且此data为clean data</h6>
+    <h6>name: {{ user_name }}</h6>
+    <h6>password: {{ password }}</h6>
+    <div class="image middle">
+    <img src={% static 'image/Shirley.jpg' %} alt="THERE IS NO SHIRLEY">
+    <div class="image-content">
+        <h1>Image Title</h1>
+        <div class="icons">
+            <a href="#" class="icon fas fa-heart"></a>
+            <a href="#" class="icon fas fa-comment"></a>
+            <a href="#" class="icon fas fa-share"></a>
+        </div>
+    </div>
+    </div>
+{% endblock %}
+{% include 'footer.html' %}
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input validation</title>
+</head>
+<body>
+<p>pls enter a number between 3 and 23</p>
+
+<input id="input" type="text" placeholder=" between 3 and 233">
+<button onclick="validation()" name="Validation" value="Validation" type="button" >Validation</button>
+<p id="v1"></p>
+<script>
+    "use strict";
+    function validation() {
+        var message,x;
+        message=document.getElementById('v1');
+        message.innerHTML='';
+        x=document.getElementById('input').value;
+        try{
+            if(x=='') throw 'empty input';
+            if(isNaN(x)) throw 'not a number';
+            x=Number(x);
+            if(x<3) throw 'too small';
+            if(x>23) throw  'too big';
+        }
+        catch (e) {
+            message.innerHTML='enter: '+ e
+        }
+        finally {
+            document.getElementById('input').value = '';
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+        Login
+    {% endblock %}</title>
+{#    <style>#}
+{#        .custom-forms{#}
+{#            border-radius: 15px;       css样式#}
+{#        }#}
+{#    </style>#}
+</head>
+<body>
+
+{% block content %}
+    <form action="" method="post">
+        <table>
+            {{ forms.as_table }}
+        </table>
+    <tr>
+        <input class="submit-btn" type="submit" value="submit" name="submit">
+    </tr>
+    </form>
+{##}
+{#    <hr>#}
+{#        <form action="">#}
+{#            {{ forms.as_p }}#}
+{##}
+{#        </form>#}
+{#    </hr>#}
+{#    <hr>#}
+{#        <form action="">#}
+{#            {{ forms.as_ul }}#}
+{#        </form>#}
+{#    </hr>#}
+{% endblock %}
+
+</body>
+</html>

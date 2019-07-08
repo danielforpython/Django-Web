@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+        raw_sql
+    {% endblock %}</title>
+</head>
+<body>
+{% block content %}
+    <h4>select * from books_bookinfo where id>2</h4>
+    {% for book in books %}
+        <br>{{ book.btitle }}--{{ book.bcomment }}
+    {% endfor %}
+
+{% endblock %}
+</body>
+</html>

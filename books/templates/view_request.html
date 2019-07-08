@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+        view_request
+    {% endblock %}</title>
+</head>
+<body>
+{% block content %}
+    <br>{{ path }}
+    <br>{{ reslover }}
+    <br>{% for get in GET %}
+        {{ get }}
+    {% endfor %}
+    <br>{{ method }}
+    <br>{{ scheme }}
+    <br>{{ body }}
+    <br>{{ reslover }}
+    <br>{{ cookies }}
+    <br>{% for get in GET %}
+        {{ get }}
+    {% endfor %}
+
+{% endblock %}
+
+</body>
+</html>

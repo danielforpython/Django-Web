@@ -1,0 +1,27 @@
+.doc{
+  width: 600px;
+  background: #f1f1f1;
+  margin: auto;
+}
+section p{
+  overflow: hidden;
+  max-height: 0em;
+  padding: 0;
+  margin: 0;
+  text-align: justify;
+  font-family: intro;
+  background: #e4e4e4;
+}
+section a {
+text-decoration: none;
+display: block;
+text-align: left;
+padding: 10px;
+background: black;
+border-bottom: 2px solid gray;
+color: white;
+}
+section:target p{
+  max-height: 20em;
+  padding: 10px;
+}

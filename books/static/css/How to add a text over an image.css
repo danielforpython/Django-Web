@@ -1,0 +1,26 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #f1f1f1;
+  font-family: 'Berkshire Swash', cursive;
+}
+.container{
+  width: 600px;
+  height: 400px;
+  position: relative;
+  margin: 200px auto;
+}
+.container img{
+  width: 600px;
+  height: 400px;
+}
+.text{
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-shadow: 0 0 10px black;
+}
+

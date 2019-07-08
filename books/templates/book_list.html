@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+            book
+    {% endblock %}</title>
+{#    <link rel="stylesheet" href={% static 'css/base.css' %}>#}
+</head>
+<body>
+
+{% block content %}
+    <div>
+{#        <h1>id---btitle---bpub_date-bcomment</h1>#}
+     <input onkeyup="filter()" type="text" id="value" placeholder="Type to search">
+    <table class="name" border="1">
+        <caption>Book List</caption>
+        <thead class="i">
+            <th>ID</th>
+            <th>书名</th>
+            <th>出版日期</th>
+            <th>书评数</th>
+            <th>isDelete</th>
+        </thead>
+        {% for book in bl %}
+        <tr>
+
+            <td class="profile">{{ book.id }}</td>
+            <td class="profile">{{ book.btitle }}</td>
+            <td class="profile">{{ book.bpub_date }}</td>
+            <td class="profile">{{ book.bcomment }}</td>
+            <td class="profile">{{ book.isDelete }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+{#            <h1>{{ book.id }}--{{ book.btitle }}--{{ book.bpub_date }}--{{ book.bcomment }}</h1>#}
+
+    </div>
+    <script type="text/javascript">
+        function filter() {
+            var value,name,profile,i;
+
+            value = document.getElementById('value').value.toUpperCase();
+            profile = document.getElementsByClassName('profile');
+
+            for(i=0;i<profile.length;i++){
+                name = profile[i].getElementsByClassName('name');
+                if (name[0].innerHTML.toUpperCase().indexOf(value)>-1){
+                    profile[i].style.display='flex';
+                } else {
+                    profile[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+{% endblock %}
+
+
+</body>
+</html>
+
+

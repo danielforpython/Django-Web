@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+    f_duixiang
+    {% endblock %}</title>
+</head>
+<body>
+{% block content %}
+
+    {% for book in f %}
+        <h1>{{ book.id }}--{{ book.btitle }}--{{ book.bpub_date }}--{{ book.bcomment }}</h1>
+    {% endfor %}
+
+{% endblock %}
+</body>
+</html>

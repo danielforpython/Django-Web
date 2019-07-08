@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+        Person
+    {% endblock %}</title>
+</head>
+<body>
+
+{% block content %}
+        <table border="1">
+        <caption>Person List</caption>
+        <thead>
+            <th>ID</th>
+            <th>校色名</th>
+            <th>点评</th>
+            <th>角色性别</th>
+            <th>出处</th>
+        </thead>
+        {% for person in pl %}
+        <tr>
+
+            <td>{{ person.id }}</td>
+            <td>{{ person.pname }}</td>
+            <td>{{ person.pcomment }}</td>
+            <td>{{ person.pgender }}</td>
+            <td>{{ person.fbook }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+
+{% endblock %}
+
+</body>
+</html>

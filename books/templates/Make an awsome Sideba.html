@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/css/Make%20an%20awsome%20Sideba.css">
+    <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <title>Sidebar</title>
+  </head>
+  <body>
+    <div class="doc">
+<div class="sidebar">
+  <div class="sidehide">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </div>
+<img src="../static/image/logo.png" alt="">
+  <ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">My Account</a></li>
+<li><a href="#">Buy/Sell</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Setting</a></li>
+<li><a href="#">about</a></li>
+</ul>
+</div>
+<div class="content">
+  <h2>
+sidebar</h2>
+<p>
+There are many variations of passages of Lorem Ipsum available, but
+    the majority have suffered alteration in some form, by injected humo
+    ur, or randomised words which don't look even slightly believable. If
+    you are going to use a passage of Lorem Ipsum, you need to be sure the
+    re isn't anything embarrassing hidden in the middle of text. All the Lo
+    rem Ipsum generators on the Internet tend to repeat predefined chunks as n
+    ecessary, making this the first true generator on the Internet. It uses a d
+    ictionary of over 200 Latin words, combined with a handful of model sentence
+    structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem
+    Ipsum is therefore always free from repetition, injected humour, or non-characteri
+    stic words etc.
+
+</p>
+<span class="hide">Show Sidebar</span>
+</div>
+</div>
+<script type="text/javascript">
+      $(".sidehide").on('click',function(){
+$('.doc').toggleClass("show");
+
+      }
+
+    );
+    </script>
+    <script type="text/javascript">
+      $(".hide").on('click',function(){
+$('.doc').toggleClass("show");
+
+      }
+
+    );
+    </script>
+  </body>
+</html>
+

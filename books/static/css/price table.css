@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url("../image/price table.jpg") no-repeat fixed;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+}
+
+.pricing-table{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.clo{
+    flex: 25%;
+    padding: 10px;
+    max-width: 320px;
+    box-sizing: border-box;
+}
+
+.table{
+    background: white;
+    color: #00bcd4;
+    padding:40px 20px ;
+    font-family: Montserrat,sans-serif;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #00000070;
+}
+
+.table h2{
+    text-transform: uppercase;
+}
+
+.table ul{
+    margin: 0;
+    padding: 0;
+}
+
+.table ul li{
+    padding: 10px 0;
+    list-style: none;
+}
+
+
+.price{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.price span{
+    display: block;
+    font-size: 14px;
+}
+
+.table a{
+    text-decoration: none;
+    color: #00bcd4;
+    border: 2px solid #00bcd4;
+    display: block;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-radius: 40px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.5s linear;
+}
+
+.table a:hover{
+    background: #00bcd4;
+    color: white;
+}
+
+.pop{
+    background: #00bcd4;
+    color: white;
+    transform: rotate(45deg);
+    padding: 10px 40px;
+    position: absolute;
+    top: 6px;
+    right: -34px;
+}
+
+@media screen and (max-width: 980px) {
+    .clo{
+        flex: 50%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .clo{
+        flex: 100%;
+    }
+}

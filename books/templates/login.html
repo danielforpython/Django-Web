@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+        Login
+    {% endblock %}</title>
+</head>
+<body>
+{% block content %}
+<form action="/app/req/" method="post">
+    username <input type="text" name="username" value="zhang3"> <br>
+    password <input type="password" name="password" value="123"> <br>
+    <input type="submit">
+性别：
+    男<input type="radio" name="gender" value="男" checked/>
+    女<input type="radio" name="gender" value="女"/><br/>
+    爱好：
+    吃饭<input type="checkbox" name="hobby" value="吃饭" checked/>
+    睡觉<input type="checkbox" name="hobby" value="睡觉"/>
+    打豆豆<input type="checkbox" name="hobby" value="打豆豆" checked/><br>
+    址址：
+    <select name="address" id="">
+        <option value="ln" selected>重庆</option>
+        <option value="jl">四川省</option>
+    </select> <br>
+    <input type="submit">
+</form>
+    <form action="" method="post">
+    Username <input type="text" name="username-u" placeholder="enter your name">
+    Password <input type="password" name="password-p" placeholder="enter the password">
+        <input type="submit" name="submit-s">
+    </form>
+{% endblock %}
+
+</body>
+</html>

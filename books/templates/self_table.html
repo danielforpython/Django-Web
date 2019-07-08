@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+    self_table
+    {% endblock %}</title>
+</head>
+<body>
+{% block content %}
+    {% for city in cities %}
+        {{ city.atitle }}
+    {% endfor %}
+
+{% endblock %}
+
+</body>
+</html>
